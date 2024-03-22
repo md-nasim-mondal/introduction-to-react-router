@@ -49,6 +49,7 @@ const router =createBrowserRouter([
       },
       {
         path: '/user/:userId',
+        loader: ({params}) =>fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
         element: <UserDetails></UserDetails>
       }
     ]
